@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import TodoForm from './TodoForm';
+import TodoItem from './TodoItem';
 
 class TodoList extends Component{
     constructor(props){
@@ -17,10 +18,13 @@ class TodoList extends Component{
             list: [...this.state.list, item]
         }))
     }
-
     render(){
+        const todos = this.state.list.map((item)=>(
+            <TodoItem title={item.title} id={item.id}/>
+        ));
         return(
             <div>
+                {todos}
                 <TodoForm addItem={this.addItem}/>
             </div>
         )

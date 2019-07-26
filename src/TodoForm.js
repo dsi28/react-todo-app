@@ -6,7 +6,7 @@ class TodoForm extends Component{
         super(props);
         this.state = {
             item:{
-                name: '',
+                title: '',
                 id: uuid()
             }
         }
@@ -23,7 +23,7 @@ class TodoForm extends Component{
         e.preventDefault();
         this.props.addItem(this.state.item);
         this.setState({item: {
-            name: '',
+            title: '',
             id: uuid()
         }});
     }
@@ -31,11 +31,12 @@ class TodoForm extends Component{
     render(){
         return(
             <form onSubmit={this.handlerSubmit}>
-                <input value={this.state.item.name}
+                <input value={this.state.item.title}
                 type='text'
                 onChange={this.handlerChange}
-                name='name'
+                name='title'
                 />
+                <button>Create</button>
             </form>
         )
     }
