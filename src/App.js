@@ -4,9 +4,10 @@ import TodoList from './TodoList';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App-container'>
       <TodoList/>
     </div>
+      
   );
 }
 export default App;

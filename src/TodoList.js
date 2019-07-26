@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import TodoForm from './TodoForm';
 import TodoItem from './TodoItem';
 import uuid from 'uuid/v4';
+import './TodoList.css';
 
 class TodoList extends Component{
     constructor(props){
@@ -13,7 +14,7 @@ class TodoList extends Component{
                 id: uuid()
             }]
         }
-        this.addItem =  this.addItem.bind(this);
+        this.addItem = this.addItem.bind(this);
         this.removeItem = this.removeItem.bind(this);
         this.updateItem = this.updateItem.bind(this);
     }
@@ -50,7 +51,9 @@ class TodoList extends Component{
             updateItem={this.updateItem}/>
         ));
         return(
-            <div>
+            <div className='TodoList-container'>
+                <h1 className='TodoList-title'>Todo List!</h1>
+                <p className='TodoList-paragraph'>Basic React Todo App...</p>
                 {todos}
                 <TodoForm addItem={this.addItem}/>
             </div>

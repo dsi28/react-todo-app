@@ -1,0 +1,14 @@
+.TodoList-container{
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+    padding: 50px;
+    background-color: #1a1b41;
+    color: #51ed40;
+}
+.TodoList-title{
+    margin: 0;
+}
+.TodoList-paragraph{
+    margin-top: 0;
+}

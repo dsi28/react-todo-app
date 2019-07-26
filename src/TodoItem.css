@@ -1,0 +1,11 @@
+.TodoItem-container{
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.TodoItem-title{
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

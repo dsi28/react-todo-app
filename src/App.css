@@ -1,3 +1,9 @@
+.App-container{
+  display: flex;
+  direction: row;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
 }

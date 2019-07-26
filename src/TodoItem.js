@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import TodoEditForm from './TodoEditForm';
+import './TodoItem.css';
 
 class TodoItem extends Component{
     constructor(props){
@@ -31,12 +32,14 @@ class TodoItem extends Component{
             id={this.props.id} 
             updateItem={this.props.updateItem}
             updateShowForm={this.updateShowForm}/> 
-            :<div>
-                <p>{this.props.title}</p>
-                <button name='edit' 
-                onClick={this.handleClick}>edit</button>                
-                <button name='delete' 
-                onClick={this.handleClick}>X</button>
+            :<div className='TodoItem-container'>
+                <p className='TodoItem-title'>{this.props.title}</p>
+                <section>
+                    <button name='edit' 
+                    onClick={this.handleClick}>edit</button>                
+                    <button name='delete' 
+                    onClick={this.handleClick}>X</button>
+                </section>
             </div>
             );
         return(
